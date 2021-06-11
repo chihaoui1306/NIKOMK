@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+body
+{
+    background-image: url('/assets/img/tokyo.jpg');
+    font-family: helvetica, arial, sans-serif;
+}
+h1{
+    text-align: center;
+    margin: 50px auto 120px !important;
+    color:red; 
+}
+.main{
+    width: 100%;
+    min-height: 38px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    top: 80%;
+
+}
+
+.service{
+    background: #fff;
+    padding: 30px;
+    border-radius:10px ;
+    position:relative ;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: 0 0 20px -15px #030380 ;
+    transition: transform .8s;
+    
+}
+
+.service-logo{
+    width: 130px;
+    height:130px;
+    border-radius: 50%;
+    margin: -90px auto 0;
+    background: white;
+    border: 18px solid rgb(255, 255, 255) ;
+ 
+}
+.service-logo img{
+    width: 50px;
+    margin-top: 20px;
+    transition: transform 1s;
+}
+.service h4{
+    height: 35px;
+    width: 80%;
+    background:white ;
+    margin: 50px auto;
+    position: relative;
+    
+}
+
+.service h4::after{
+    content: '';
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(to right ,rgb(255, 255, 255) , rgb(250, 11, 11)) ;
+    position:absolute;
+    right:-5px;
+    top: -5px;
+    z-index: -1;
+
+}
+
+.service h4::before{
+    content: '';
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(to right , rgb(250, 11, 11),rgb(255, 255, 255) ) ;
+    position:absolute;
+    left:-5px;
+    bottom:-5px ;
+    z-index: -1;
+ 
+}
+.shadowOne{
+    height:100px ;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0;
+    left: 10%;
+    z-index: -1; 
+    box-shadow: 0 0 20px -15px #030380 ;
+    transition: transform .8s;
+
+}
+
+
+.main:hover .service{
+    transform:translateY(-50px);
+}
+.main:hover .shadowOne{
+    transform:translateY(-25px);
+}
+
+.main:hover img{
+    transform: rotate(360deg);
+}
+
+
+/*titre */
+@keyframes tipsy {
+    0 {
+      transform: translateX(100%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+
+  .link {
+    color: #fffbf1;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .link:before,
+  .link:after {
+    content: '';
+    padding: .9em .4em;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    display: block;
+    border: 15px solid red;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .link:before {
+    border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .link:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+  }
